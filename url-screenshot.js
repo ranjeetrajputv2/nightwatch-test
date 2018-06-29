@@ -9,7 +9,7 @@ module.exports = {
     var url = process.argv[4],
         save_directory = 'screenshots',
         viewport_widths = [1024];
-    browser.resizeWindow(1020, 900);
+    browser.resizeWindow(1920, 3000);
 	console.log('URL',url);
     browser.url(url).waitForElementVisible('body', 1000);
     browser.pause(10000);
