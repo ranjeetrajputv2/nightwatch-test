@@ -30,7 +30,11 @@
         "path" : ""
       },
       "desiredCapabilities": {
-        "browserName": "chrome"
+        "javascriptEnabled": true,
+        "browserName": "chrome",
+        "chromeOptions" : {
+          "args" : ["headless", "no-sandbox", "disable-gpu"]
+        }
       }
     },
 
