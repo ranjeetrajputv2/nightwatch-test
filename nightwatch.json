@@ -8,13 +8,13 @@
 
   "selenium" : {
     "start_process" : true,
-    "server_path" : "selenium-server-standalone-3.12.0.jar",
+    "server_path" : "../selenium-server-standalone-3.12.0.jar",
     "start_session": true,
     "log_path" : "",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "drivers/chromedriver.exe",
-      "webdriver.gecko.driver" : "drivers/geckodriver.exe",
+      "webdriver.chrome.driver" : "drivers/chromedriver",
+      "webdriver.gecko.driver" : "",
       "webdriver.edge.driver" : ""
     }
   },
