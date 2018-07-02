@@ -20,7 +20,9 @@ module.exports = {
 		client.click("//a[text()='Sign in']")
 		client.useCss();
 
-		
+		client.url(function (response) {
+			console.log(response.value); // outputs the current url
+	 });
 		client.saveScreenshot(save_directory + '/screenshot'+uuidv4()+'.png');
 		
 		client.pause(5000)
