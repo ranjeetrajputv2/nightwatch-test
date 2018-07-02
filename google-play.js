@@ -30,6 +30,9 @@ module.exports = {
 		.setValue('input[type=email]', 'facebook21r')
 		client.useXpath()     // every selector now must be XPath
 		client.assert.visible("//*[text()='Next']")
+		client.assert.visible("//button[text()='Next']")
+		client.assert.visible("//button[value='Next']")
+		client.assert.visible("//input[value='Next']")
 		client.click("//*[text()='Next']")
 		client.useCss();
 		
