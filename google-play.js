@@ -26,7 +26,7 @@ module.exports = {
 		client.saveScreenshot(save_directory + '/screenshot'+uuidv4()+'.png');
 		
 		client.pause(5000)
-		client.assert.visible("//input[type=email]")
+		client.assert.visible("input[type=email]")
 		.setValue('input[type=email]', 'facebook21r')
 		client.useXpath()     // every selector now must be XPath
 		client.assert.visible("//*[text()='Next']")
@@ -34,7 +34,7 @@ module.exports = {
 		client.useCss();
 		
 		client.pause(5000)
-		client.assert.visible("//input[type=password]")
+		client.assert.visible("input[type=password]")
 		.setValue('input[type=password]', '21071990r')
 		client.useXpath()     // every selector now must be XPath
 		client.assert.visible("//*[text()='Next']")
