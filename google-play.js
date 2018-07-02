@@ -21,6 +21,7 @@ module.exports = {
 		client.useCss();
 
 		
+		client.saveScreenshot(save_directory + '/screenshot'+uuidv4()+'.png');
 		
 		client.pause(5000)
 		.setValue('input[type=email]', 'facebook21r')
