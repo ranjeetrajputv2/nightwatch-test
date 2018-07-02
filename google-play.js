@@ -26,17 +26,19 @@ module.exports = {
 		client.saveScreenshot(save_directory + '/screenshot'+uuidv4()+'.png');
 		
 		client.pause(5000)
+		client.assert.visible("//input[type=email]")
 		.setValue('input[type=email]', 'facebook21r')
 		client.useXpath()     // every selector now must be XPath
-		client.assert.visible("//span[text()='Next']")
-		client.click("//span[text()='Next']")
+		client.assert.visible("//*[text()='Next']")
+		client.click("//*[text()='Next']")
 		client.useCss();
 		
 		client.pause(5000)
+		client.assert.visible("//input[type=password]")
 		.setValue('input[type=password]', '21071990r')
 		client.useXpath()     // every selector now must be XPath
-		client.assert.visible("//span[text()='Next']")
-		client.click("//span[text()='Next']")
+		client.assert.visible("//*[text()='Next']")
+		client.click("//*[text()='Next']")
 		client.useCss();
 		
 		client.pause(5000)
