@@ -1,7 +1,7 @@
 module.exports = {
   'Google Play Demo' : function (client) {
 	  
-		save_directory = 'screenshots';
+		save_directory = '/var/www/html/screenshots';
 		
 		if (process.argv.length < 5) {
 		  console.log('No URL was specified');
@@ -44,7 +44,7 @@ module.exports = {
 		
 		client.pause(5000)
 		client.resizeWindow(1920, 3000);
-	client.saveScreenshot(save_directory + '/screenshot'+uuidv4()+'.png');
+	  client.saveScreenshot(save_directory + '/screenshot'+uuidv4()+'.png');
 
 		client.assert.visible(".oocvOe button:first-child");
 		client.click(".oocvOe button:first-child")
