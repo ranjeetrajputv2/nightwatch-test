@@ -7,7 +7,7 @@ module.exports = {
     }
 
     var url = process.argv[4],
-        save_directory = 'screenshots',
+        save_directory = '/var/www/html/screenshots',
         viewport_widths = [1024];
     browser.resizeWindow(1920, 3000);
 	console.log('URL',url);
