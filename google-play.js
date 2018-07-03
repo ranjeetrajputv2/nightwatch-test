@@ -23,29 +23,29 @@ module.exports = {
 		client.url(function (response) {
 			console.log(response.value); // outputs the current url
 	 });
-		client.saveScreenshot(save_directory + '/screenshot'+uuidv4()+'.png');
+		//client.saveScreenshot(save_directory + '/screenshot'+uuidv4()+'.png');
 		
 		client.pause(5000)
 		client.assert.visible("input[type=email]")
 		.setValue('input[type=email]', 'facebook21r')
 		client.useXpath()     // every selector now must be XPath
-		client.assert.visible("//*[text()='Next']")
-		client.assert.visible("//button[text()='Next']")
-		client.assert.visible("//button[value='Next']")
-		client.assert.visible("//input[value='Next']")
-		client.click("//*[text()='Next']")
+		client.assert.visible("//input[@type = 'submit']");
+		//client.assert.visible("//input[value='Next']")
+		client.click("//input[@type='submit']")
 		client.useCss();
 		
 		client.pause(5000)
 		client.assert.visible("input[type=password]")
 		.setValue('input[type=password]', '21071990r')
 		client.useXpath()     // every selector now must be XPath
-		client.assert.visible("//*[text()='Next']")
-		client.click("//*[text()='Next']")
+		client.assert.visible("//input[@type='submit']")
+		client.click("//input[@type='submit']")
 		client.useCss();
 		
 		client.pause(5000)
-		
+		client.resizeWindow(1920, 3000);
+	client.saveScreenshot(save_directory + '/screenshot'+uuidv4()+'.png');
+
 		client.assert.visible(".oocvOe button:first-child");
 		client.click(".oocvOe button:first-child")
 		client.resizeWindow(1920, 3000);
